@@ -147,7 +147,7 @@ void s_o_a()
     printf("%s\n", "Enter visota...");
     scanf("%d", &h);
 
-    printf("%s%f%s%f\n", "S: ", 2 * M_PI * r, " V: ", pow(r, 2) * h);
+    printf("%s%f%s%f\n", "S: ", 2 * M_PI * r * h, " V: ", M_PI * pow(r, 2) * h);
 
 }
 

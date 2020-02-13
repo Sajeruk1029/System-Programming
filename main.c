@@ -2,6 +2,8 @@
 #include <math.h>
 #include <stdbool.h>
 
+#define DUEM2 2.54F
+
 void sr_znach()
 {
     int x1 = 0, x2 = 0;
@@ -17,21 +19,21 @@ void sr_znach()
 void duem_to_sm()
 {
     int num = 0;
-    const float DUEM = 25.4F;
+    const float DUEM = 2.54F;
 
     printf("%s\n", "Enter duem...");
     scanf("%d", &num);
-    printf("%s%d\n", "Sm: ", (int)trunc(DUEM * num));
+    printf("%s%f\n", "Sm: ", (float)trunc(DUEM2 * num));
 }
 
 void sm_to_duem()
 {
-    int num = 0;
-    const float SM = 25.4F;
+    float num = 0;
+    const float SM = 2.54F;
 
     printf("%s\n", "Enter sm...");
-    scanf("%d", &num);
-    printf("%s%d\n", "Duem: ", (int)trunc(num / SM));
+    scanf("%f", &num);
+    printf("%s%f\n", "Duem: ", (num / SM));
 }
 
 void farengete_to_celsi()
